@@ -418,4 +418,5 @@ plt.show()
 <p align="center">
 <img src="https://user-images.githubusercontent.com/92525345/226477625-67202f48-5f1d-4189-9317-ad267939905a.png" alt="alt text" width="500"/>
 <img src="https://user-images.githubusercontent.com/92525345/226477634-32ad220d-4f82-4b08-9f56-0be16f456632.png" alt="alt text" width="500"/>
+The poor quality emerges quite clearly from the two graphs above of the dataset: the variables are not clearly distinguished and this increases the probability that the models will fall into error.
 
