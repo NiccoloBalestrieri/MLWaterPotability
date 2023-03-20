@@ -23,9 +23,9 @@ You can find this water potability dataset at **https://www.kaggle.com/datasets/
      - [Data visualization](#data-visualization)
      - [Dataset splitting](#dataset-splitting)
   - :hammer_and_wrench:[Preprocessing](#preprocessing-)
+     - [Manage NaN value](#manage-nan-values)   
      - [Feature selection](#feature-selection)
        - [Mutual information](#mutual-information)
-       - [Chi2](#chi2)
      - [Feature scaling](#feature-scaling)
   - :question:[Models comparison](#models-comparison-)
   - :books:[Fine tuning](#fine-tuning-)
@@ -146,7 +146,7 @@ water_potability['Sulfate'].fillna(value=water_potability['Sulfate'].mean(),inpl
 water_potability['Trihalomethanes'].fillna(value=water_potability['Trihalomethanes'].mean(),inplace=True)
 ```
 ### Feature selection
-The dataset, therefore, contains some values that turn out to be useless, for this reason the feature selection is performed. With it I'm going to eliminate those values ​​that are of little significance for the task, in particular going to use the mutual information.
+The dataset, therefore, contains some values that turn out to be useless, for this reason the feature selection is performed. With it I'm going to eliminate those values that are of little significance for the task, in particular going to use the mutual information.
 ```python
 y = water_potability.pop('Potability') #pop is used to cancel the target columns
 X = water_potability
@@ -163,12 +163,12 @@ print(featureScores)
 Below I show what are the scores, obtained by the mutual information, thanks to the use of the "SelectKBest":
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/92525345/226472850-6e67fc83-34d1-4dc4-b769-834f671767a1.png" alt="alt text" width="500"/>
+<img src="https://user-images.githubusercontent.com/92525345/226472850-6e67fc83-34d1-4dc4-b769-834f671767a1.png" alt="alt text" width="250"/>
 
 It can be seen from the "Score" values that there are not very good examples for this reason I select as important features all those that have a "Score" other than 0.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/92525345/226473175-c7034d5b-ea1d-4f01-8627-2c1bc23c4246.png" alt="alt text" width="500"/>
+<img src="https://user-images.githubusercontent.com/92525345/226473175-c7034d5b-ea1d-4f01-8627-2c1bc23c4246.png" alt="alt text" width="250"/>
 
 
 ### Feature scaling
@@ -417,5 +417,5 @@ plt.show()
 ```
 <p align="center">
 <img src="https://user-images.githubusercontent.com/92525345/226477625-67202f48-5f1d-4189-9317-ad267939905a.png" alt="alt text" width="500"/>
-<img src="https://user-images.githubusercontent.com/92525345/226477634-32ad220d-4f82-4b08-9f56-0be16f456632.png" alt="alt text" width="300"/>
+<img src="https://user-images.githubusercontent.com/92525345/226477634-32ad220d-4f82-4b08-9f56-0be16f456632.png" alt="alt text" width="500"/>
 
