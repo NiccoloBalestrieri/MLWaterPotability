@@ -109,8 +109,6 @@ print("\nPlot graph for all the feature\n")
     plt.title("Water Potability", fontsize=20)
     plt.show()
 ```
-<p align="center">
-<img src="https://user-images.githubusercontent.com/91635053/164088805-7a743c27-1a4d-473a-b1e1-e48d29e201ca.png" alt="alt text" width="500"/>
 
 The percentages of the target variable were represented with a pie chart:
 <p align="center">
